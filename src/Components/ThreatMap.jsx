@@ -7,7 +7,7 @@ function ThreatMap() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    d3.json("dist/data/countries-110m.json").then((topology) => {
+    d3.json("/dist/data/countries-110m.json").then((topology) => {
       const geoData = feature(topology, topology.objects.countries).features;
       setCountries(geoData);
     });
